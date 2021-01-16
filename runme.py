@@ -11,12 +11,12 @@
 
 class investment:
 
-    def __init__(self, maxGeschoss, aGrund, GFZ):
+    def __init__(self, maxGeschoss, aGrund, GFZ, wertHaus):
 
         self.maxGeschoss = maxGeschoss
         self.aGrund = aGrund
         self.GFZ = GFZ
-
+        self.wertHaus = wertHaus
 
 
         pass
@@ -32,3 +32,21 @@ class investment:
 
 
         return maxA
+
+
+
+    def ruecklagen(self):
+
+        rueckpa = self.wertHaus * 0.02
+        rueckpm = rueckpa/12
+
+        return rueckpa, rueckpm
+
+
+
+
+
+if __name__ == "__main__":
+
+    test = investment
+    print(test(2,564,0.4,700000).aWohn())
